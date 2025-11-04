@@ -9,8 +9,7 @@ class Settings(BaseSettings):
     db_hostname: str 
     db_port: str 
     db_name: str 
+    model_config = SettingsConfigDict(env_file=".env", env_file_encoding="utf-8")
     
-    class Config:
-        env_file = '.env'
     
 settings = Settings()
